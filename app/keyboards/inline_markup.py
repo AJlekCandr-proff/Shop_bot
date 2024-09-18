@@ -43,3 +43,31 @@ def buy_menu() -> InlineKeyboardMarkup:
     inline_markup.row(InlineKeyboardButton(text='Купить 💳', callback_data='Buy'))
 
     return inline_markup.as_markup()
+
+
+def accept_menu() -> InlineKeyboardMarkup:
+    """
+    Функция создания меню-клавиатуры для подтверждения пополнения баланса.
+
+    :return: Объект класса InlineKeyboardMarkup.
+    """
+
+    inline_markup = InlineKeyboardBuilder()
+
+    inline_markup.row(InlineKeyboardButton(text='Подтвердить ✅', callback_data='accept_payment'))
+
+    return inline_markup.as_markup()
+
+
+def connection_menu(url: str) -> InlineKeyboardMarkup:
+    """
+    Функция создания кнопки для связи с администрацией.
+
+    :return: Объект класса InlineKeyboardMarkup.
+    """
+
+    inline_markup = InlineKeyboardBuilder()
+
+    inline_markup.row(InlineKeyboardButton(text='Администрация 🔰', url=url))
+
+    return inline_markup.as_markup()

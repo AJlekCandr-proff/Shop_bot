@@ -24,9 +24,9 @@ def msg_product(product: str, product_cost: float) -> str:
 def msg_payment(sum: float) -> str:
     return f"""
 ➖➖➖➖➖➖➖➖➖➖➖
-💳 Номер карты для оплаты: 
+💳 Реквизиты: 
 
-       **** **** **** ****
+       <code>**** **** **** ****</code>
 
 ❗️ВАЖНО: Переводите средства точно и аккуратно!
 Сумма к пополнению: {sum}
@@ -58,3 +58,13 @@ def msg_user(user_id: int, balance: float, name: str) -> str:
 🆔 Telegram: <ins>{user_id}</ins>
 👤 Имя: {name}
 💸 Balance: {balance} ₽ """
+
+
+def msg_check_payment(user_id: int, sum: float, name: str) -> str:
+    return f"""
+📄 Новый чек об пополнении баланса 🔔 
+📌 <a href="tg: user?id={user_id}"><i>{name}</i></a> 
+🆔 Telegram: <ins>{user_id}</ins>
+👤 Имя: {name}
+💸 Сумма: {sum} ₽ """
+

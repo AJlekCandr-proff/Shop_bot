@@ -15,6 +15,8 @@ class Settings(BaseSettings):
 
     TELEGRAM_API_TOKEN: SecretStr
     SQLALCHEMY_URL: str
+    ADMIN_ID: int
+    ADMIN_URL: str
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf8", extra="ignore")
 

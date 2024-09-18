@@ -87,7 +87,7 @@ async def buy_product_game(callback: CallbackQuery, state: FSMContext) -> None:
 
     user = await select_profile(user_id=callback.from_user.id)
 
-    if user.balance >= price:
+    if float(user.balance) >= float(price):
         await update_balance(user_id=callback.from_user.id, balance=user.balance - price)
 
         await callback.message.answer(text='Спасибо за покупку! С вами свяжется администрация бота в ближайшее время...')

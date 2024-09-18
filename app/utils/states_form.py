@@ -18,6 +18,7 @@ class StatesUser(StatesGroup):
 
     get_sum = State()
     check_pay = State()
+    get_confirmation = State()
     choice_game = State()
     choice_product = State()
     buy_product = State()
