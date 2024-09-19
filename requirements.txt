@@ -2,3 +2,4 @@ aiogram~=3.13.0
 SQLAlchemy~=2.0.35
 loguru~=0.7.2
 pydantic~=2.8.2
+aiosqlite~=0.20.0
