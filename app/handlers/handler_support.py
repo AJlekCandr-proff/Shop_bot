@@ -1,6 +1,7 @@
 from aiogram import Router, F
 from aiogram.types import Message
 
+from ..bot_settings import settings
 
 router = Router(name=__name__)
 
@@ -15,6 +16,6 @@ async def support_user(message: Message) -> None:
     """
 
     await message.answer(
-        text='🪖 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 - <a href="https://t.me/splityandexx">НАПИСАТЬ</a>',
+        text=f'🪖 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 - <a href="{settings.ADMIN_URL}">НАПИСАТЬ</a>',
         disable_web_page_preview=True
     )

@@ -4,7 +4,7 @@ from aiogram.fsm.context import FSMContext
 
 from ..views import msg_product
 from ..utils.states_form import StatesUser
-from ..bot_settings import YandexSplitBot, settings
+from ..bot_settings import Shop_bot, settings
 from ..data_base.requests import *
 from ..keyboards.inline_markup import categories_menu, catalog_menu, buy_menu
 
@@ -92,7 +92,7 @@ async def buy_product_game(callback: CallbackQuery, state: FSMContext) -> None:
 
         await callback.message.answer(text='Спасибо за покупку! С вами свяжется администрация бота в ближайшее время...')
 
-        await YandexSplitBot.send_message(
+        await Shop_bot.send_message(
             chat_id=settings.ADMIN_ID,
             text=f'🔔 <i>Новая покупка 🛍</i>\n\n'
                  f'<b>👤 Пользователь:</b> <a href="tg:user?id={user.user_id}">{callback.from_user.full_name}</a>\n'

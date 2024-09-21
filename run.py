@@ -2,7 +2,7 @@ import asyncio
 
 from aiogram import Dispatcher, Bot
 
-from app.bot_settings import YandexSplitBot, Logger
+from app.bot_settings import Shop_bot, Logger
 from app import router as root_router
 from app.data_base.Engine import async_engine
 
@@ -17,7 +17,7 @@ async def main_start(bot: Bot) -> None:
 
     dp = Dispatcher()
 
-    dp.include_routers(root_router)
+    dp.include_router(root_router)
 
     Logger.info('Bot successfully started!')
 
@@ -31,7 +31,7 @@ async def main_start(bot: Bot) -> None:
 
 if __name__ == '__main__':
     try:
-        asyncio.run(main_start(YandexSplitBot))
+        asyncio.run(main_start(Shop_bot))
 
     except KeyboardInterrupt:
         Logger.info('Bot successfully finished!')

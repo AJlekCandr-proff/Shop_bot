@@ -24,7 +24,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 
-YandexSplitBot = Bot(token=settings.TELEGRAM_API_TOKEN.get_secret_value(), default=DefaultBotProperties(parse_mode='HTML'))
+Shop_bot = Bot(token=settings.TELEGRAM_API_TOKEN.get_secret_value(), default=DefaultBotProperties(parse_mode='HTML'))
 
 
 Logger = logger
